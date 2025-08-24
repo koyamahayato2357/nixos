@@ -143,7 +143,7 @@
     autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
     shellAliases = {
-      n = "vim";
+      n = "nvim";
     };
   };
 
