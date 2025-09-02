@@ -116,10 +116,13 @@
     isNormalUser = true;
     shell = pkgs.zsh;
     extraGroups = [ "wheel" "video" ]; # Enable ‘sudo’ for the user.
+    hashedPassword = "$y$j9T$srZCpiaeafhJn6f4ZWKvV1$uhpACgzDkWf8I66j6fdfNFL3fdA0XmbWzv5/izWnjA1";
     # packages = with pkgs; [
     #   tree
     # ];
   };
+
+  users.mutableUsers = false;
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
