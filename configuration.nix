@@ -20,7 +20,6 @@
     grub = {
       device = "nodev";
       enable = true;
-      useOSProber = true;
       efiSupport = true;
     };
     efi.canTouchEfiVariables = true;
