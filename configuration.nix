@@ -13,17 +13,10 @@
     ];
 
   # Use the systemd-boot EFI boot loader.
-  # boot.loader.systemd-boot.enable = true;
-  # boot.loader.efi.canTouchEfiVariables = true;
-  # boot.loader.systemd-boot.configurationLimit = 5;
-  boot.loader = {
-    grub = {
-      device = "nodev";
-      enable = true;
-      efiSupport = true;
-    };
-    efi.canTouchEfiVariables = true;
-  };
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.systemd-boot.configurationLimit = 5;
+
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   hardware.bluetooth.enable = true;
