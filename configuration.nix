@@ -154,6 +154,11 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
+  swapDevices = [{
+    device = "/swap";
+    size = 64 * 1024; # 64GB
+  }];
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
