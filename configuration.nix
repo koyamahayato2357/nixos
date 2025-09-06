@@ -136,8 +136,8 @@
     enable = true;
     enableSSHSupport = true;
   };
-  programs.hyprland.enable = true;
   programs.mtr.enable = true;
+  programs.niri.enable = true;
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -182,6 +182,12 @@
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "25.05"; # Did you read the comment?
+
+  # nix bug: path
+  systemd.user.services.niri = {
+    path = [ pkgs.bash pkgs.gnugrep ];
+    wantedBy = [ "default.target" ];
+  };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }
