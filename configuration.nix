@@ -34,9 +34,10 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.inputMethod = {
-    type = "fcitx5";
     enable = true;
     fcitx5.addons = with pkgs; [ fcitx5-skk ];
+    fcitx5.waylandFrontend = true;
+    type = "fcitx5";
   };
   console = {
     font = "Lat2-Terminus16";
