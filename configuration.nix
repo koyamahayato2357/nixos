@@ -35,9 +35,17 @@
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.inputMethod = {
     enable = true;
-    fcitx5.addons = with pkgs; [ fcitx5-skk ];
-    fcitx5.waylandFrontend = true;
     type = "fcitx5";
+    fcitx5 = {
+      addons = with pkgs; [ fcitx5-skk ];
+      waylandFrontend = true;
+      settings.inputMethod = {
+          Default = {
+            "0" = "keyboard-us";
+            "1" = "skk";
+          };
+      };
+    };
   };
   console = {
     font = "Lat2-Terminus16";
