@@ -100,17 +100,14 @@
       CPU_BOOST_ON_BAT = 0;
       CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
       CPU_HWP_DYN_BOOST_ON_BAT = 0;
-      DISK_IOSCHED = "keep keep";
-      NATACPI_ENABLE = 1;
-      PLARFORM_PROFILE_ON_BAT = "low-power";
+      NMI_WATCHDOG = 0;
+      PLATFORM_PROFILE_ON_BAT = "low-power";
       RADEON_DPM_PERF_LEVEL_ON_BAT = "auto";
-      RADEON_DPM_STATE_ON_AC = "battery";
+      RADEON_DPM_STATE_ON_BAT = "battery";
+      RADEON_POWER_PROFILE_ON_BAT = "low";
       RESTORE_THRESHOLDS_ON_BAT = 0;
-      RUNTIME_PM_DENYLIST = "mei_me nouveau radeon";
       STOP_CHARGE_THRESH_BAT0 = 85;
       TLP_DEFAULT_MODE = "BAT";
-      TPACPI_ENABLE = 1;
-      TPSMAPI_ENABLE = 1;
     };
   };
 
